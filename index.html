@@ -1,12 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD131</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 Dynamic Web Fundamentals Your Name</title>
+  <meta name="description" content="WDD 131 Dynamic Web Fundamentals Sarafina Weyulu">
+  <meta name="author" content="Sarafina Weyulu">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>WDD-Sarafina</h1>
+  <header>
+    <h1><span id="course-title">WDD 131 Dynamic Web Fundamentals - Sarafina Weyulu</span></h1>
+    <nav>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/sarafina-weyulu-864443100/">LinkedIn</a></li>
+        <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a></li>
+        <li><a href="#">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
     
+    <section class="card">
+
+      <figure class="about">
+        <h2 class="about_me">About Me</h2>
+        <img src="images/profile.jpg" alt="Profile photo of Sarafina Weyulu" class="float-img">
+        <p class="me"> My name is Sarafina Weyulu, my friends and relative call me Ndeshi. I am 29 years old female. 
+          I was born and raised in Omaalala Village, Ongwediva. 
+          I currently live in Swakopmund. My hobbies are sewing, baking, reading and taking nature walks. 
+          I am studying Web and computer programing.</p>
+      </figure>
+
+      <figure class = "swakop">
+        <h2 class="city_name">Swakopmund, Namibia</h2>
+        <hr>
+        <img src="images/flag_namibia.jpg" alt="flag">
+        
+        <p class="city">
+       Swakopmund is a coastal city in Namibia,
+       famous for its German colonial architecture, 
+       desert-meets-ocean scenery, and adventure tourism opportunities.
+   </p>
+   <p class="flag">Official Flag of Namibia</p>
+   </figure>
+   
+    </section>
+    
+    <section class="card">
+      <h2 class="webhead">Web Dev Resources</h2>
+      <ul>
+        <li><a href="https://dev.to">Dev.to Community</a></li>
+        <li><a href="https://www.smashingmagazine.com">Smashing Magazine</a></li>
+        <li><a href="https://css-tricks.com">CSS Tricks</a></li>
+        <li><a href="https://www.w3schools.com">W3 Schools</a></li>
+        <li><a href="https://www.udemy.com">Udemy</a></li>
+      </ul>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; <span id="currentyear"></span> | Sarafina Weyulu | Namibia</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>
