@@ -1,102 +1,102 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  line-height: 1.6;
-  background-color: #f1e6d5;
-  color: #5b3f69;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f1e6d5;
+    color: #5b3f69;
 }
 
 header {
-  background-color: #914b75;
-  color: #f1e6d5;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
+    background-color: #914b75;
+    color: #f1e6d5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
 }
 
 header h1 {
-  margin: 0;
+    margin: 0;
 }
 
 #hamburger {
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: #f1e6d5;
-  cursor: pointer;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #f1e6d5;
+    cursor: pointer;
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: none;
-  flex-direction: column;
-  gap: 0.5rem;
-  background-color: #5b3f69;
-  width: 100%;
-  text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #5b3f69;
+    width: 100%;
+    text-align: center;
 }
 
 nav ul li a {
-  color: #f1e6d5;
-  text-decoration: none;
-  padding: 0.5rem;
-  transition: background 0.3s, color 0.3s;
+    color: #f1e6d5;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: background 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-  background: #f1e6d5;
-  color: #914b75;
-  border-radius: 4px;
+    background: #f1e6d5;
+    color: #914b75;
+    border-radius: 4px;
 }
 
 main {
-  max-width: 1000px;
-  margin: 1rem auto;
-  padding: 0 1rem;
+    max-width: 1000px;
+    margin: 1rem auto;
+    padding: 0 1rem;
 }
 
 main h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 .temple-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
 figure {
-  margin: 0;
-  background: white;
-  padding: 0.5rem;
-  border-radius: 8px;
-  text-align: center;
-  border: 2px solid #914b75;
+    margin: 0;
+    background: white;
+    padding: 0.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid #914b75;
 }
 
 figure img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
 }
 
 footer {
-  background-color: #914b75;
-  color: #f1e6d5;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+    background-color: #914b75;
+    color: #f1e6d5;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
 }
 
 footer p {
-  margin: 0.25rem 0;
-  line-height: 1.2;
+    margin: 0.25rem 0;
+    line-height: 1.2;
 }
 
 .show {
-  display: flex;
+    display: flex;
 }
