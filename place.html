@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Country page for Namibia">
+    <title>Namibia</title>
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Namibia</h1>
+    </header>
+
+    <main>
+
+        <!-- HERO IMAGE -->
+        <picture class="hero">
+            <source srcset="images/namibia-large.webp" media="(min-width: 768px)">
+            <img src="images/namibia-small.webp" alt="Namib Desert landscape in Namibia" width="800" height="500">
+        </picture>
+
+        <!-- DATA SECTION -->
+        <section class="card data">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 825,615 sq km</li>
+                <li><strong>Population:</strong> 2,727,409</li>
+                <li><strong>Capital:</strong> Windhoek</li>
+                <li><strong>Languages:</strong> English</li>
+                <li><strong>Currency:</strong> Namibian Dollar</li>
+                <li><strong>Time Zone:</strong> UTC+2</li>
+                <li><strong>Calling Code:</strong> +264</li>
+                <li><strong>Internet TLD:</strong> .na</li>
+            </ul>
+        </section>
+
+        <!-- WEATHER SECTION -->
+        <section class="card weather">
+            <h2>Weather</h2>
+
+            <div class="weather-content">
+                <img src="images/weather.svg" alt="Partly cloudy weather icon" class="weather-icon">
+
+                <ul>
+                    <li><strong>Temperature:</strong> <span id="temp">10</span> °C</li>
+                    <li><strong>Conditions:</strong> Partly Cloudy</li>
+                    <li><strong>Wind:</strong> <span id="wind">10</span> km/h</li>
+                    <li><strong>Wind Chill:</strong> <span id="windchill"></span></li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+       <footer>
+            <div class="footer">
+                <div class="footer-top">
+                     © <span id="year"></span> 🌸 Sarafina Ndeshihafela Weyulu 🌸 <span class="footer-country">Namibia</span>
+                </div>
+                 <div class="footer-bottom">
+                     Last Modification: <span id="lastModified"></span>
+                </div>
+            </div>
+        </footer>
+
+</body>
+
+</html>

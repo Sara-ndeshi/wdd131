@@ -1,0 +1,108 @@
+:root {
+  --primary-color: #003580;
+  --secondary-color: #d21034;
+  --accent-color: #009543;
+  --light-bg: #ffffff;
+  --text-color: #222;
+  --font-main: system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* HERO */
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* MAIN */
+main {
+  padding: 0rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* CARDS */
+.card {
+  background-color: var(--light-bg);
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+/* H2 — SMALL SCREEN ONLY */
+.card h2 {
+  margin-top: 0;
+  background-color: white;
+  color: black;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* LISTS */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0.3rem 0;
+}
+
+/* WEATHER CONTENT */
+.weather-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weather-icon {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  text-align: center;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+/* Small screens: force Namibia to next line */
+.footer-country {
+  display: block; /* moves Namibia to its own line */
+  margin: 0;
+  padding: 0;
+}
+
+
