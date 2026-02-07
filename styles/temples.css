@@ -1,3 +1,4 @@
+/* Base Styles (Mobile-first) */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -17,6 +18,7 @@ header {
 
 header h1 {
     margin: 0;
+    font-size: 1.5rem;
 }
 
 #hamburger {
@@ -99,4 +101,36 @@ footer p {
 
 .show {
     display: flex;
+}
+
+/* small Screens */
+@media screen and (min-width: 600px) {
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        background: none;
+        width: auto;
+    }
+
+    nav ul li a {
+        padding: 0.5rem 1rem;
+    }
+
+    .temple-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Large Screens  */
+@media screen and (min-width: 900px) {
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
 }

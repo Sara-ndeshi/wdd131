@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Temple Album</title>
-  <meta name="description" content="This is Sarafina Weyulu's WDD 131 Dynamic Web Fundamentals, favourite temple album">
+  <meta name="description" content="Sarafina Weyulu's WDD 131 Dynamic Web Fundamentals: Temple Album">
   <meta name="author" content="Sarafina Weyulu">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,65 +24,19 @@
 
     <nav id="nav-menu">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Old</a></li>
-        <li><a href="#">New</a></li>
-        <li><a href="#">Large</a></li>
-        <li><a href="#">Small</a></li>
+        <li><a href="#" data-filter="all">Home</a></li>
+        <li><a href="#" data-filter="old">Old</a></li>
+        <li><a href="#" data-filter="new">New</a></li>
+        <li><a href="#" data-filter="large">Large</a></li>
+        <li><a href="#" data-filter="small">Small</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h2>Home</h2>
-
-    <div class="temple-grid">
-
-      <figure>
-        <img src="images/Durban_South_Africa_Temple.jpg" alt="Durban South Africa Temple">
-        <figcaption>Durban South Africa Temple</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/Johannesburg_South_Africa_Temple.jpg" alt="Johannesburg South Africa Temple">
-        <figcaption>Johannesburg South Africa Temple</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/Harare_Zimbabwe_Temple.jpg" alt="Harare Zimbabwe Temple">
-        <figcaption>Harare Zimbabwe Temple</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/Kinshasa_DRC_Temple.jpg" alt="Kinshasa Democratic Republic of the Congo Temple">
-        <figcaption>Kinshasa Democratic Republic of the Congo Temple</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/Nairobi_Kenya_Temple.jpg" alt="Nairobi Kenya Temple">
-        <figcaption>Nairobi Kenya Temple</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/Aba_Nigeria_Temple.jpg" alt="Aba Nigeria Temple">
-        <figcaption>Aba Nigeria Temple</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/Helsinki_Finland_Temple.jpg" alt="Helsinki Finland Temple">
-        <figcaption>Helsinki Finland Temple</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/Frankfurt_Germany_Temple.jpg" alt="Frankfurt Germany Temple">
-        <figcaption>Frankfurt Germany Temple</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/The_Hague_Netherlands_Temple.jpg" alt="Accra Ghana Temple">
-        <figcaption>The Hague Netherlands Temple</figcaption>
-      </figure>
-
+    <h2 id="filter-title">Home</h2>
+    <div class="temple-grid" id="templeGrid">
+      <!-- Temple cards will be generated here via JavaScript -->
     </div>
   </main>
 

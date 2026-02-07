@@ -1,17 +1,35 @@
 @media (min-width: 768px) {
 
+  /* Navigation */
   nav ul {
     display: flex !important;
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
+    background: none; 
   }
 
   #hamburger {
-    display: none;
+    display: none; /* Hide hamburger on larger screens */
   }
 
+  /* Temple grid */
   .temple-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; 
+  }
+
+  figure {
+    padding: 1rem; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover */
+  }
+
+  figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  figcaption {
+    font-size: 0.95rem; /* Slightly larger text for desktops */
   }
 }
