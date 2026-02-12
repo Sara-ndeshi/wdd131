@@ -7,7 +7,7 @@ function showWireframe(type) {
     container.innerHTML = `
       <h3>Mobile Wireframe Sketch</h3>
       <ul>
-        <li>Header + Logo  + menu sign </li>
+        <li>Header + Logo  + menu </li>
         <li>Hero / Intro</li>
         <li>Attractions Section</li>
         <li>Adventure Activities</li>
