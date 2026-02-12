@@ -41,19 +41,27 @@
 <section>
   <h2>Wireframes</h2>
 
+  <p>Click a button below to see a sketch of the layout or access the live Wireframe.cc link.</p>
   <button onclick="showWireframe('mobile')">Mobile Wireframe</button>
   <button onclick="showWireframe('desktop')">Desktop Wireframe</button>
 
   <div id="wireframe-container" class="wireframe hidden"></div>
 </section>
 
+<section>
+  <h2>Live Project</h2>
+  <p>Click the button to view the live website:</p>
+  <button onclick="showLiveProject()">Show Live Project Link</button>
+  <div id="live-project-container" class="wireframe hidden"></div>
+</section>
+
 </main>
 
 <footer>
-  <p>WDD131 Project Site Plan</p>
+  <p>WDD131 Project Site Plan | &copy; <span id="year"></span></p>
 </footer>
 
-<script src="siteplan.js"></script>
+<script src="siteplan.js" defer></script>
 
 </body>
 </html>
