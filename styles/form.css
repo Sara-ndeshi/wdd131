@@ -3,6 +3,10 @@
   --light-purple: #c7c0c7;
   --input-bg: #f0f0f0;
   --border: #9c9c9c;
+  --text-color: black;
+  --star-color: gold;
+  --optional-color: navy;
+  --required-color: red;
 }
 
 * { box-sizing: border-box; }
@@ -11,6 +15,7 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #e6e6e6;
+  color: var(--text-color);
 }
 
 /* Header */
@@ -40,11 +45,9 @@ form {
 label { font-weight: bold; display: block; margin-bottom: 0.5rem; }
 
 input[type="text"], 
-input[type="email"], 
-input[type="number"], 
-input[type="url"],
 select, 
-textarea {
+textarea, 
+input[type="date"] {
   width: 100%;
   padding: 0.8rem;
   font-size: 1rem;
@@ -53,26 +56,20 @@ textarea {
 }
 
 input[type="checkbox"], 
-input[type="radio"] {
-  width: auto;
-  margin-right: 0.5rem;
-}
+input[type="radio"] { width: auto; margin-right: 0.5rem; }
 
 /* 5-Star Rating */
 .stars-container {
   display: flex;
-  flex-direction: row; /* highest star last for proper click order */
-  justify-content: flex-start;
-  gap: 0.25rem;
+  flex-direction: row-reverse; /* highest star first */
+  justify-content: flex-start; /* stars on left */
 }
 
-.stars-container input[type="radio"] {
-  display: none;
-}
+.stars-container input[type="radio"] { display: none; }
 
 .stars-container label {
   font-size: 2.5rem;
-  color: black;
+  color: var(--text-color);
   cursor: pointer;
   transition: color 0.2s;
 }
@@ -80,13 +77,13 @@ input[type="radio"] {
 /* Hover highlight */
 .stars-container label:hover,
 .stars-container label:hover ~ label {
-  color: gold;
+  color: var(--star-color);
 }
 
 /* Selected star highlight */
 .stars-container input[type="radio"]:checked + label,
 .stars-container input[type="radio"]:checked + label ~ label {
-  color: gold;
+  color: var(--star-color);
 }
 
 /* Checkboxes */
@@ -97,12 +94,10 @@ input[type="radio"] {
   text-align: left;
   border: none;
   padding: 0;
-  width: auto;
 }
 
 .checkbox-group legend {
   text-align: left;
-  width: 100%;
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
@@ -110,14 +105,17 @@ input[type="radio"] {
 .checkbox-group label {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 0.5rem;
   cursor: pointer;
   font-weight: normal; 
 }
 
+.checkbox-group input[type="checkbox"] { margin: 0; }
+
 /* Optional text */
-.optional { color: navy; font-weight: normal; }
-.required { color: red; font-weight: bold; }
+.optional { color: var(--optional-color); font-weight: normal; }
+.required { color: var(--required-color); font-weight: bold; }
 
 /* Submit */
 input[type="submit"] {
@@ -140,10 +138,12 @@ footer {
   margin-top: 2rem;
 }
 
-/* Media query for small screens: stack stars vertically */
+/* Media Query: small screens */
 @media (max-width: 600px) {
+  form { padding: 1rem; }
   .stars-container {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column-reverse; /* vertical stars, 1-star at bottom */
+    align-items: flex-start;        /* stars on left */
   }
+  .stars-container label { font-size: 2rem; margin-bottom: 0.5rem; }
 }
