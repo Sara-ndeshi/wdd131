@@ -32,23 +32,34 @@ const attractions = [
 
 /* --- Page Initialization --- */
 document.addEventListener("DOMContentLoaded", () => {
-    // Set Footer Dates
+    // 1. Set Footer Dates
     const yearSpan = document.querySelector("#year");
     const lastModSpan = document.querySelector("#lastUpdated");
     
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
     if (lastModSpan) lastModSpan.textContent = document.lastModified;
 
-    // Load Attractions if on the Attractions page
+    // 2. Load Attractions if on the Attractions page
     const container = document.querySelector("#activities");
     if (container) {
         displayAttractions(attractions);
         displayFavorites();
     }
 
-    // Initialize Global Favorite Count (Nav Badge)
+    // 3. Initialize Global Favorite Count (Nav Badge)
     updateFavCount();
-});
+
+    // 4. Hamburger Menu Logic (DOM Interaction)
+    const menuButton = document.querySelector("#menu-button");
+    const navLinks = document.querySelector("#nav-links");
+
+    if (menuButton && navLinks) {
+        menuButton.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+            menuButton.textContent = navLinks.classList.contains("show") ? "❌" : "☰";
+        });
+    }
+}); 
 
 /* --- Core Functions --- */
 
@@ -57,13 +68,12 @@ function displayAttractions(items) {
     const container = document.querySelector("#activities");
     if (!container) return;
 
-    container.innerHTML = ""; // Clear existing content
+    container.innerHTML = ""; 
 
     items.forEach(item => {
         const card = document.createElement("div");
         card.className = "card";
         
-        // Exclusively using template literals for output
         card.innerHTML = `
             <img src="${item.img}" alt="${item.name}" loading="lazy" width="400" height="250">
             <h3>${item.name}</h3>
@@ -77,7 +87,6 @@ function displayAttractions(items) {
 
 // 2. Filtering Function (Array Method & Conditional Branching)
 function filterActivities(type) {
-    // If 'all' is passed, show everything, otherwise filter by type
     const filtered = type === 'all' 
         ? attractions 
         : attractions.filter(attr => attr.type.toLowerCase() === type.toLowerCase());
@@ -93,7 +102,6 @@ function saveFavorite(id) {
         favorites.push(id);
         localStorage.setItem("swakopFavs", JSON.stringify(favorites));
         
-        // Visual feedback
         updateFavCount();
         displayFavorites();
         alert(`Activity added to your favorites!`);
@@ -114,7 +122,6 @@ function displayFavorites() {
         return;
     }
 
-    // Filter our main array to find the objects that are in our favorites list
     const favItems = attractions.filter(attr => favorites.includes(attr.id));
 
     favListContainer.innerHTML = "";
@@ -145,3 +152,8 @@ function updateFavCount() {
         countDisplay.textContent = favorites.length;
     }
 }
+
+// Ensure functions are globally accessible for HTML onclick events
+window.filterActivities = filterActivities;
+window.saveFavorite = saveFavorite;
+window.removeFavorite = removeFavorite;

@@ -21,16 +21,24 @@
             <h1>Visit Swakopmund</h1>
         </div>
         <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="attractions.html">Attractions</a>
-            <a href="contact.html">Contact</a>
+            <button id="menu-button" aria-label="Menu">☰</button>
+    
+            <!-- ONLY the links go inside this div -->
+            <div id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="attractions.html">Attractions</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <!-- The badge stays outside so it's always visible -->
             <span class="fav-badge">❤ <span id="fav-count">0</span></span>
         </nav>
+
     </header>
 
     <main>
         <section class="hero">
-            <!-- Ensure this image is optimized as .webp for performance -->
+            
             <img src="images/hero.webp" alt="Aerial view of Swakopmund beach and the Atlantic Ocean" width="1200"
                 height="600">
             <div class="hero-text">
@@ -65,20 +73,22 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Sarafina N. Weyulu | Swakopmund, Namibia</p>
-        <div class="social">
-            <a href="https://www.facebook.com/swkmun/" target="_blank" rel="noopener"
-                aria-label="Follow us on Facebook">
-                <img src="images/facebook.svg" alt="Facebook Icon" width="30" height="30">
-            </a>
-            <a href="https://www.instagram.com/swkmun/" target="_blank" rel="noopener"
-                aria-label="Follow us on Instagram">
-                <img src="images/instagram.svg" alt="Instagram Icon" width="30" height="30">
-            </a>
-        </div>
-        <p>Last updated: <span id="lastUpdated"></span></p>
-        <a href="references.html">Image & Content References</a>
-    </footer>
+    <p>&copy; <span id="year"></span> Sarafina N. Weyulu | Visit Swakopmund</p>
+    <div class="social">
+        <!-- Added rel="noopener" for target="_blank" security -->
+        <a href="https://www.facebook.com/swkmun/" target="_blank" rel="noopener" aria-label="Facebook">
+            <img src="images/facebook.svg" alt="Facebook Icon" width="24" height="24">
+        </a>
+        <a href="https://www.instagram.com/swkmun/" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="images/instagram.svg" alt="Instagram Icon" width="24" height="24">
+        </a>
+        <a href="https://x.com/swkmun" target="_blank" rel="noopener" aria-label="X-Twitter">
+            <img src="images/x-solid-full.svg" alt="X Icon" width="24" height="24">
+        </a>
+    </div>
+    <p>Last updated: <span id="lastUpdated"></span></p>
+    <a href="references.html">References</a>
+</footer>
 </body>
 
 </html>

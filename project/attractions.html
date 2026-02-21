@@ -16,9 +16,15 @@
             <h1>Visit Swakopmund</h1>
         </div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="attractions.html" class="active">Attractions</a>
-            <a href="contact.html">Contact</a>
+            <button id="menu-button" aria-label="Menu">☰</button>
+            <div id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="attractions.html">Attractions</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <!-- The badge stays outside so it's always visible -->
+            <span class="fav-badge">❤ <span id="fav-count">0</span></span>
         </nav>
     </header>
 
@@ -44,17 +50,21 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Sarafina N. Weyulu | Visit Swakopmund</p>
-        <div class="social">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Visit our Facebook page">
-                <img src="images/facebook.svg" alt="Facebook" width="24" height="24">
-            </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Visit our Instagram profile">
-                <img src="images/instagram.svg" alt="Instagram" width="24" height="24">
-            </a>
-        </div>
-        <p>Last updated: <span id="lastUpdated"></span></p>
-        <a href="references.html">References</a>
-    </footer>
+    <p>&copy; <span id="year"></span> Sarafina N. Weyulu | Visit Swakopmund</p>
+    <div class="social">
+        <!-- Added rel="noopener" for target="_blank" security -->
+        <a href="https://www.facebook.com/swkmun/" target="_blank" rel="noopener" aria-label="Facebook">
+            <img src="images/facebook.svg" alt="Facebook Icon" width="24" height="24">
+        </a>
+        <a href="https://www.instagram.com/swkmun/" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="images/instagram.svg" alt="Instagram Icon" width="24" height="24">
+        </a>
+        <a href="https://x.com/swkmun" target="_blank" rel="noopener" aria-label="X-Twitter">
+            <img src="images/x-solid-full.svg" alt="X Icon" width="24" height="24">
+        </a>
+    </div>
+    <p>Last updated: <span id="lastUpdated"></span></p>
+    <a href="references.html">References</a>
+</footer>
 </body>
 </html>

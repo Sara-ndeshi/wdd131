@@ -17,10 +17,17 @@
         <h1>Visit Swakopmund</h1>
     </div>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="attractions.html">Attractions</a>
-        <a href="contact.html" class="active">Contact</a>
+        <button id="menu-button" aria-label="Menu">☰</button>
+        <div id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="attractions.html">Attractions</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- The badge stays outside so it's always visible -->
+        <span class="fav-badge">❤ <span id="fav-count">0</span></span>
     </nav>
+
 </header>
 
 <main>

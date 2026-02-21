@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>References | Visit Swakopmund</title>
-    <!-- Fixed the CSS path to match your project folder structure -->
     <link rel="stylesheet" href="styles/project.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
     <script defer src="scripts/project.js"></script>
@@ -17,10 +16,19 @@
         <h1>Visit Swakopmund</h1>
     </div>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="attractions.html">Attractions</a>
-        <a href="contact.html">Contact</a>
+        <button id="menu-button" aria-label="Menu">☰</button>
+    
+        <!-- ONLY the links go inside this div -->
+        <div id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="attractions.html">Attractions</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- The badge stays outside so it's always visible -->
+        <span class="fav-badge">❤ <span id="fav-count">0</span></span>
     </nav>
+
 </header>
 
 <main>
@@ -43,15 +51,18 @@
 <footer>
     <p>&copy; <span id="year"></span> Sarafina N. Weyulu | Visit Swakopmund</p>
     <div class="social">
+        <!-- Added rel="noopener" for target="_blank" security -->
         <a href="https://www.facebook.com/swkmun/" target="_blank" rel="noopener" aria-label="Facebook">
-            <img src="images/facebook.svg" alt="Facebook" width="24" height="24">
+            <img src="images/facebook.svg" alt="Facebook Icon" width="24" height="24">
         </a>
         <a href="https://www.instagram.com/swkmun/" target="_blank" rel="noopener" aria-label="Instagram">
-            <img src="images/instagram.svg" alt="Instagram" width="24" height="24">
+            <img src="images/instagram.svg" alt="Instagram Icon" width="24" height="24">
+        </a>
+        <a href="https://x.com/swkmun" target="_blank" rel="noopener" aria-label="X-Twitter">
+            <img src="images/x-solid-full.svg" alt="X Icon" width="24" height="24">
         </a>
     </div>
     <p>Last updated: <span id="lastUpdated"></span></p>
-    <!-- On the references page, we still link back to it for footer consistency -->
     <a href="references.html">References</a>
 </footer>
 
